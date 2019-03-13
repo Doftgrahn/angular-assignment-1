@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as car from '../../../src/assets/cardone.png';
+
 
 @Component({
   selector: 'app-trafficlight',
@@ -7,11 +7,10 @@ import * as car from '../../../src/assets/cardone.png';
   styleUrls: ['./trafficlight.component.scss']
 })
 export class TrafficlightComponent implements OnInit {
-  carPic = car;
+  carPic = '../../assets/cardone.png';
   title: string = 'Traffic Light';
   state: number = 0;
   activeClass: boolean = false;
-
 
   onClick() {
     if (this.state == 3) {
@@ -22,11 +21,9 @@ export class TrafficlightComponent implements OnInit {
     }
     setInterval(() => {
       this.activeClass = true;
-    }, 3000);
+    }, 1000);
     this.activeClass = false;
   };
-
-
 
   constructor() { }
 

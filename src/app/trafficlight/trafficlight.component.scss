@@ -75,6 +75,22 @@ img {
     transform: translateX(-1000px);
   }
 
+  25% {
+    transform: translateY(100px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  60% {
+    transform: translateY(25px);
+    transform: translate3d(50deg);
+  }
+  80%{
+    transform:rotateZ(90deg);
+  }
+
   100% {
     transform: translateX(1000px);
   }

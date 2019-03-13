@@ -6,5 +6,5 @@
     <div [ngClass]="{'green': state ===2}"></div>
   </div>
   <button (click)="onClick()">Next Light</button>
-  <img [ngClass]="{'carAnimation': activeClass === true }" src="{{carPic}}" alt="Car">
+  <img [ngClass]="{'carAnimation': activeClass === true }" [src]="carPic" alt="Car">
 </section>
