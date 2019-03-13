@@ -1,0 +1,10 @@
+<section>
+  <h2>{{title}}</h2>
+  <div class="l__wrapper">
+    <div [ngClass]="{'red' : state === 0 || state === 1}"></div>
+    <div [ngClass]="{'yellow' : state === 1 || state === 3}"></div>
+    <div [ngClass]="{'green': state ===2}"></div>
+  </div>
+  <button (click)="onClick()">Next Light</button>
+  <img [ngClass]="{'carAnimation': activeClass === true }" src="{{carPic}}" alt="Car">
+</section>

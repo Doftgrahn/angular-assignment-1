@@ -1,0 +1,81 @@
+@import "../variables";
+
+section {
+  background-color: $background-color-black;
+  padding: 20px 40px;
+  max-width: $width;
+  border: 30px solid $color-yellow;
+  border-radius: 20px;
+  @media screen and (min-width: 800px) {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      color: white;
+      margin: 0;
+      text-decoration: underline;
+    }
+  }
+
+  .l__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+      margin: 20px;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      border: 1px solid $color-blue;
+    }
+  }
+
+  button {
+    padding: 4px;
+    margin: 2px;
+    background-color: $color-yellow;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: $color-blue;
+    }
+  }
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+img {
+  top: 15%;
+  transform: translateX(-1000px);
+  position: absolute;
+  height: 100px;
+  width: 200px;
+}
+
+.carAnimation {
+  animation: carLoop 3s;
+}
+@keyframes carLoop {
+  0% {
+    transform: translateX(-1000px);
+  }
+
+  100% {
+    transform: translateX(1000px);
+  }
+}

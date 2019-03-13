@@ -1,0 +1,25 @@
+@import "variables";
+
+.container {
+  margin: 0;
+  background-image: url("../../src/assets/pic.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+  h1 {
+    background-color: $background-color-black;
+    padding: 1em;
+    border: 20px solid $color-yellow;
+    border-radius: 20px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
