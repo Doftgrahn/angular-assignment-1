@@ -68,7 +68,7 @@ img {
 }
 
 .carAnimation {
-  animation: carLoop 3s;
+  animation: carLoop 2s;
 }
 @keyframes carLoop {
   0% {
@@ -87,11 +87,13 @@ img {
     transform: translateY(25px);
     transform: translate3d(50deg);
   }
-  80%{
-    transform:rotateZ(90deg);
+
+  80% {
+    transform: rotateZ(45deg);
   }
 
   100% {
+    transform: rotateZ(0deg);
     transform: translateX(1000px);
   }
 }
