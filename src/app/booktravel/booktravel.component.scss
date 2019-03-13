@@ -1,0 +1,16 @@
+@import "../variables";
+
+section {
+  border-radius: 20px;
+  margin: 20px;
+  border: 20px solid $color-yellow;
+  min-height: $height;
+  width: $width;
+  background-color: $background-color-black;
+
+  h2 {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+  }
+}
