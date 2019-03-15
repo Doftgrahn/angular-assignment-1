@@ -5,10 +5,9 @@ import { Wowclasses } from './wowclasses';
 })
 export class ListService {
 
-  listClasses: Wowclasses[] = ['Warrior', 'Paladin', 'Hunter', 'Rouge', 'Priest', 'Death Knight', 'Shaman', 'Monk', 'Druid', 'Demon Hunter'].map(classes => ({ character: classes }));
+   listClasses: Wowclasses[] = ['Warrior', 'Paladin', 'Hunter', 'Rouge', 'Priest', 'Death Knight', 'Shaman', 'Monk', 'Druid', 'Demon Hunter'].map((classes, id) => ({ character: classes, id: id }));
 
   lastinArray: number = 0;
-
 
   addCharacter(character: Wowclasses): ListService {
     if (!character.character) {
@@ -20,14 +19,31 @@ export class ListService {
   }
 
   removeItem(id: number): ListService {
-    this.listClasses = this.listClasses.filter(char => char.id !== id);
+    this.listClasses = this.listClasses.filter(character => character.id !== id);
     return this;
   }
 
-
-  getAllCharacters():Wowclasses[] {
+  getAllCharacters(): Wowclasses[] {
     return this.listClasses;
   }
+
+
+  updateById(id: number, values: Object = {}): Wowclasses {
+    let classes = this.getCharacterById(id);
+    if (!classes) {
+      return null;
+    }
+    Object.assign(classes, values);
+    return classes;
+  }
+
+
+  getCharacterById(id: number): Wowclasses {
+    return this.listClasses.filter(char => char.id === id).pop();
+  }
+
+
+
 
 
   constructor() { }

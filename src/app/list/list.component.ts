@@ -14,7 +14,14 @@ export class ListComponent implements OnInit {
   selectedIndex: number;
   newCharacter = new Wowclasses();
 
-  constructor(private wowClasses: ListService) { }
+  constructor(private wowClasses: ListService) {
+
+  }
+  /*Set index on class so i can pinpoint them and add class.*/
+  setIndex(index: number) {
+    this.selectedIndex = index;
+  }
+  /*add,remove(not done yet) and a function to get all the characters*/
 
   addCharacter() {
     this.wowClasses.addCharacter(this.newCharacter);
@@ -23,16 +30,14 @@ export class ListComponent implements OnInit {
 
   removeCharacter(character: any) {
     this.wowClasses.removeItem(character);
-    console.log(character)
   }
 
+  /*Get the array-- and the id*/
   get allCharacters() {
     return this.wowClasses.getAllCharacters();
   }
 
-  setIndex(index: number) {
-    this.selectedIndex = index;
-  }
+
 
   ngOnInit() {
   }

@@ -5,4 +5,5 @@ export class Wowclasses {
   constructor(values: Object = {}) {
     Object.assign(this, values);
   }
+
 }
