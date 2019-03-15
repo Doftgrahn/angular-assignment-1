@@ -1,14 +1,17 @@
 <section>
   <h2>Travel</h2>
   <div class="list-wrapper">
-      <app-travel *ngFor="let city of cities; let i =index;"
+      <app-travel class="blue" *ngFor="let city of cities; let i =index;"
       [ngClass]= "{'blue' : selectedIndex === i}"
       [city]="city.city"
       [typeOfTravel] = "city.typeOfTravel"
       (onSelected)="SelectedCity($event)"></app-travel>
   </div>
+  <button (click)="unSelect()">Reset</button>
+
+
 <div *ngIf="!selectCity" class="container">
-  <p>no City has been selected</p>
+  <p>no City has been selected   </p>
   </div>
   <div *ngIf= "selectCity" class="container">
     <p>  You have selected {{selectCity.city}}</p>

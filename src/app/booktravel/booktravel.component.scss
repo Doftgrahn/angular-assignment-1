@@ -1,11 +1,16 @@
 @import "../variables";
 
 section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 20px;
   margin: 20px;
   border: 20px solid $color-yellow;
   min-height: 300px;
   width: $width;
+  height: $width;
   background-color: $background-color-black;
 
   h2 {
@@ -20,17 +25,22 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 1em;
 
     p {
       color: white;
+      margin-top: 20px;
     }
   }
 }
 
+button {
+  width: 20%;
+}
+
 .list-wrapper {
   display: flex;
-  align-items: center;
-  flex: 1;
+  flex-direction: row;
 }
 
 .blue {

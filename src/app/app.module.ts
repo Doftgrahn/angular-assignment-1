@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { TrafficlightComponent } from './trafficlight/trafficlight.component';
 import { BooktravelComponent } from './booktravel/booktravel.component';
 import { TravelComponent } from './booktravel/travel/travel.component';
-
+import { ListComponent } from './list/list.component';
+ 
 @NgModule({
   declarations: [
     AppComponent,
     TrafficlightComponent,
     BooktravelComponent,
-    TravelComponent
+    TravelComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

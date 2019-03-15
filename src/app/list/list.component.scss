@@ -1,0 +1,42 @@
+@import "../variables";
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 20px;
+  border: 20px solid $color-yellow;
+  width: $width;
+  background-color: $background-color-black;
+
+  h2 {
+    margin: 0 0 1em;
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+  }
+
+  li {
+    list-style-type: none;
+    text-align: left;
+    flex: 1;
+    color: white;
+    margin: 0;
+    cursor: pointer;
+    padding: 0.4em;
+  }
+
+  input {
+    width: 40%;
+  }
+
+  button {
+    float: right;
+  }
+}
+
+.blue {
+  background-color: $color-blue;
+  border-radius: 10px;
+}

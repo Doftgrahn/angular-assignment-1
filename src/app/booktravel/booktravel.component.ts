@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { City } from '../city';
 @Component({
   selector: 'app-booktravel',
@@ -6,7 +6,7 @@ import { City } from '../city';
   styleUrls: ['./booktravel.component.scss']
 })
 export class BooktravelComponent implements OnInit {
-selectedIndex:number;
+  selectedIndex: number;
 
 
   cities: City[] = [{
@@ -33,7 +33,7 @@ selectedIndex:number;
 
   selectCity: City = null;
   @Output() onSelected = new EventEmitter<City>();
-@Input() blue:string;
+  @Input() blue: string;
 
   ngOnInit() {
   }
@@ -42,9 +42,12 @@ selectedIndex:number;
     this.selectCity = city;
     this.onSelected.emit(city);
   }
+  unSelect() {
+    this.selectCity = null
+  }
 
   setIndex(index: number) {
-this.selectedIndex = index;
-}
+    this.selectedIndex = index;
+  }
 
 }
