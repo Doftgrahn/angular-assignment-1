@@ -10,7 +10,7 @@ import { ListService } from '../list.service';
 })
 export class ListComponent implements OnInit {
   title: string = 'world of warcraft classes';
-  character: Wowclasses[];
+  // character: Wowclasses[];
   selectedIndex: number;
   newCharacter = new Wowclasses();
 
