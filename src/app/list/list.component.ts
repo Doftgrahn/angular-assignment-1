@@ -12,12 +12,9 @@ export class ListComponent implements OnInit {
   title: string = 'world of warcraft classes';
   character: Wowclasses[];
   selectedIndex: number;
-
   newCharacter = new Wowclasses();
 
-  constructor(private wowClasses: ListService) {
-    this.character = wowClasses.listClasses;
-  }
+  constructor(private wowClasses: ListService) { }
 
   addCharacter() {
     this.wowClasses.addCharacter(this.newCharacter);
@@ -26,14 +23,19 @@ export class ListComponent implements OnInit {
 
   removeCharacter(character: any) {
     this.wowClasses.removeItem(character);
+    console.log(character)
   }
 
-
-  ngOnInit() {
+  get allCharacters() {
+    return this.wowClasses.getAllCharacters();
   }
 
   setIndex(index: number) {
     this.selectedIndex = index;
   }
+
+  ngOnInit() {
+  }
+
 
 }

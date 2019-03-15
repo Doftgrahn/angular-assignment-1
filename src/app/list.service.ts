@@ -7,7 +7,7 @@ export class ListService {
 
   listClasses: Wowclasses[] = ['Warrior', 'Paladin', 'Hunter', 'Rouge', 'Priest', 'Death Knight', 'Shaman', 'Monk', 'Druid', 'Demon Hunter'].map(classes => ({ character: classes }));
 
-  lastinArray: number = this.listClasses.length;
+  lastinArray: number = 0;
 
 
   addCharacter(character: Wowclasses): ListService {
@@ -22,6 +22,11 @@ export class ListService {
   removeItem(id: number): ListService {
     this.listClasses = this.listClasses.filter(char => char.id !== id);
     return this;
+  }
+
+
+  getAllCharacters():Wowclasses[] {
+    return this.listClasses;
   }
 
 
