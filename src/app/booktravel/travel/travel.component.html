@@ -1,6 +1,3 @@
-<section>
-  <h2>Vart vill du resa?</h2>
-  <ul>
-    <li *ngFor="let city of cities">{{city.city}}</li>
-  </ul>
-</section>
+<ul>
+  <li (click)="handleClick($event)">{{city}}</li>
+</ul>

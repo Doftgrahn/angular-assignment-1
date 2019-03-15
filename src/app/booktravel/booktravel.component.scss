@@ -4,7 +4,7 @@ section {
   border-radius: 20px;
   margin: 20px;
   border: 20px solid $color-yellow;
-  min-height: $height;
+  min-height: 300px;
   width: $width;
   background-color: $background-color-black;
 
@@ -13,4 +13,26 @@ section {
     color: white;
     text-decoration: underline;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    p {
+      color: white;
+    }
+  }
+}
+
+.list-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.blue {
+  background-color: $color-blue;
 }

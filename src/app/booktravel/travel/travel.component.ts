@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { CitiesService } from '../../cities.service';
 import { City } from '../../city';
+
 
 @Component({
   selector: 'app-travel',
@@ -9,22 +9,26 @@ import { City } from '../../city';
 })
 export class TravelComponent implements OnInit {
 
-  cities: City[];
-  selectedCity: City = null;
-
+  @Input() city: string;
+  @Input() typeOfTravel: string;
   @Output() onSelected = new EventEmitter<City>();
 
-  constructor(private cityService: CitiesService) {
-    this.cities = cityService.cities;
+
+  constructor() {
   }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+
+  handleClick() {
+    this.onSelected.emit({
+      city: this.city,
+      typeOfTravel: this.typeOfTravel,
+    });
+    console.log(event.target);
   }
 
 
-  onSelectedCity(city: City) {
-    this.selectedCity = city;
-    this.onSelected.emit(city);
-  }
+
 
 }

@@ -1,21 +1,8 @@
 @import "../../variables";
 
-section {
-  h2 {
-    text-align: left;
-    margin: 0 35px;
-    color: white;
-  }
-
-  ul {
-    display: flex;
-    color: white;
-    flex-direction: row;
-
-    li {
-      flex: 1;
-      list-style-type: none;
-      cursor: pointer;
-    }
-  }
+li {
+  color: white;
+  flex: 1;
+  list-style-type: none;
+  cursor: pointer;
 }
