@@ -5,18 +5,16 @@ import { Wowclasses } from './wowclasses';
 })
 
 export class ListService {
-  listClasses: Wowclasses[] = ['Warrior', 'Paladin', 'Hunter', 'Rouge', 'Priest', 'Death Knight', 'Shaman', 'Monk', 'Druid', 'Demon Hunter'].map(( classes, id ) => ({ id: id, character: classes }));
-  // listClasses: Wowclasses[] = [];
-
+  listClasses: Wowclasses[] = ['Warrior', 'Paladin', 'Hunter', 'Rouge', 'Priest', 'Death Knight', 'Shaman', 'Monk', 'Druid', 'Demon Hunter'].map((classes, id) => ({ id: id , character: classes }));
   lastId: number = 0;
 
-  constructor() {}
+  constructor() { }
 
-  addCharacter(character: Wowclasses): ListService {
-    if (!character.character) {
+  addCharacter(character: Wowclasses, id:Wowclasses): ListService {
+    if (!character.character || !character.id) {
       character.id = ++this.lastId;
     }
-    this.listClasses.push(character)
+    this.listClasses.push({ id: character.id, character: character.character})
     return this;
   }
 

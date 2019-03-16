@@ -24,7 +24,7 @@ export class ListComponent implements OnInit {
   /*add,remove(not done yet) and a function to get all the characters*/
 
   addCharacter() {
-    this.wowClasses.addCharacter(this.newCharacter);
+    this.wowClasses.addCharacter(this.newCharacter, this.newCharacter);
     this.newCharacter = new Wowclasses;
   }
 

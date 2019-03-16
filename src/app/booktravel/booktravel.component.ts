@@ -30,6 +30,8 @@ export class BooktravelComponent implements OnInit {
 
   constructor() { }
 
+
+
   selectCity: City = null;
   @Output() onSelected = new EventEmitter<City>();
   @Input() blue: string;

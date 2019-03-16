@@ -8,12 +8,15 @@ import { City } from '../../city';
   styleUrls: ['./travel.component.scss']
 })
 export class TravelComponent implements OnInit {
+indexFinder:any;
+
 
   @Input() city: string;
   @Input() typeOfTravel: string;
   @Output() onSelected = new EventEmitter<City>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() { }
 
@@ -23,6 +26,7 @@ export class TravelComponent implements OnInit {
       typeOfTravel: this.typeOfTravel,
     });
   }
+
 
 
 
