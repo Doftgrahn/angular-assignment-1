@@ -6,11 +6,11 @@ import { Wowclasses } from './wowclasses';
 
 export class ListService {
   listClasses: Wowclasses[] = ['Warrior', 'Paladin', 'Hunter', 'Rouge', 'Priest', 'Death Knight', 'Shaman', 'Monk', 'Druid', 'Demon Hunter'].map((classes, id) => ({ id: id , character: classes }));
-  lastId: number = 0;
+  lastId: number = this.listClasses.length +1;
 
   constructor() { }
 
-  addCharacter(character: Wowclasses, id:Wowclasses): ListService {
+  addCharacter(character: Wowclasses, id: Wowclasses): ListService {
     if (!character.character || !character.id) {
       character.id = ++this.lastId;
     }
