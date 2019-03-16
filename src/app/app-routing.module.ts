@@ -6,7 +6,7 @@ import { BooktravelComponent } from './booktravel/booktravel.component';
 import { ListComponent } from './list/list.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'trafficlight', pathMatch: 'full' },
+  { path: '', redirectTo: '', pathMatch: 'full' },
   { path: 'trafficlight', component: TrafficlightComponent },
   { path: 'bookTravel', component: BooktravelComponent },
   { path: 'listCharacters', component: ListComponent },];

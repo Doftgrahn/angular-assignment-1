@@ -1,12 +1,9 @@
 <div class="container">
   <h1>{{title | titlecase }}</h1>
-<div class="router__container">
-<a routerLink ="/trafficlight">TrafficLight</a>
-<a routerLink ="/bookTravel">See what of travel here!</a>
-<a routerLink ="/listCharacters">Check out your characters!</a>
-</div>
-
-
-<router-outlet></router-outlet>
-
+  <div class="router__container">
+    <a routerLink="/trafficlight">Traffic Light</a>
+    <a routerLink="/bookTravel">Travel</a>
+    <a routerLink="/listCharacters">Characters</a>
+  </div>
+  <router-outlet></router-outlet>
 </div>
