@@ -13,19 +13,15 @@ export class TravelComponent implements OnInit {
   @Input() typeOfTravel: string;
   @Output() onSelected = new EventEmitter<City>();
 
-
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit() { }
-
 
   handleClick() {
     this.onSelected.emit({
       city: this.city,
       typeOfTravel: this.typeOfTravel,
     });
-    console.log(event.target);
   }
 
 

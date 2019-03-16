@@ -1,9 +1,8 @@
 export class Wowclasses {
-  character: string;
-  id?: number;
+  id: number;
+  character: string = '';
 
   constructor(values: Object = {}) {
     Object.assign(this, values);
   }
-
 }

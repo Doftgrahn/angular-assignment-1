@@ -5,7 +5,7 @@
     (click)="setIndex(i)"
     [ngClass]="{'blue': selectedIndex === i}">
     <span>{{char.character}}</span>
-    <button (click)="removeCharacter(character)">
+    <button (click)="removeCharacter(char)">
       Delete
     </button>
   </li>
@@ -15,6 +15,6 @@
   [(ngModel)]="newCharacter.character"
   (keyup.enter)="addCharacter()" />
   <span>
-    You have {{allCharacters.length}} characters in your list
+    You have {{allCharacters.length}} characters in your list.
   </span>
 </section>

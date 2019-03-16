@@ -8,7 +8,6 @@ import { City } from '../city';
 export class BooktravelComponent implements OnInit {
   selectedIndex: number;
 
-
   cities: City[] = [{
     city: 'Göteborg',
     typeOfTravel: 'Bike'
