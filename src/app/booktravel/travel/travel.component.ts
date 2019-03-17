@@ -8,7 +8,7 @@ import { City } from '../../city';
   styleUrls: ['./travel.component.scss']
 })
 export class TravelComponent implements OnInit {
-indexFinder:any;
+  indexFinder: any;
 
 
   @Input() city: string;

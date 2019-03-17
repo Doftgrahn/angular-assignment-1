@@ -1,9 +1,9 @@
 <div class="container">
   <h1>{{title | titlecase }}</h1>
   <div class="router__container">
-    <a routerLink="/trafficlight">Traffic Light</a>
-    <a routerLink="/bookTravel">Travel</a>
-    <a routerLink="/listCharacters">Characters</a>
+    <a routerLink="/trafficlight" [routerLinkActive]="'active'">Traffic Light</a>
+    <a routerLink="/bookTravel" [routerLinkActive]="'active'">Travel</a>
+    <a routerLink="/listCharacters" [routerLinkActive]="'active'">Characters</a>
   </div>
   <router-outlet></router-outlet>
 </div>

@@ -32,17 +32,52 @@
     border: 20px solid $color-yellow;
     border-radius: 20px;
     margin-bottom: 20px;
+    z-index: 10;
 
     a {
       padding: 20px;
       color: white;
       text-decoration: none;
       cursor: pointer;
-      transition: 0.2s;
+      transition: 0.001s ease;
 
       &:hover {
-        color: $color-yellow;
+        color: black;
       }
     }
+  }
+}
+
+.active {
+  // border: 2px solid $color-blue;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-blue;
+    position: absolute;
+    display: block;
+    animation: slide 0.5s alternate;
+    z-index: -10;
+  }
+}
+@keyframes slide {
+  0% {
+    background-color: $color-yellow;
+    width: 0;
+    height: 0;
+    top: 50px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    height: 100%;
+    width: 100%;
   }
 }
