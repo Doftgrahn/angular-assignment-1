@@ -9,9 +9,9 @@
     <a [routerLink]="['listCharacters']" [routerLinkActive]="'active'">Characters</a>
   </div>
 
-  <div class="content" [@routerAnimation] ="getRouteAnimation(router)" >
-    <router-outlet #router="outlet"></router-outlet>
 
+  <div  [@routerAnimation] ="getRouteAnimation(router)" >
+    <router-outlet #router="outlet"></router-outlet>
   </div>
 
 

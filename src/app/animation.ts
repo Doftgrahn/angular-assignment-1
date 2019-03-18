@@ -6,7 +6,7 @@ import {
   style,
   transition,
   trigger
-  } from '@angular/animations';
+} from '@angular/animations';
 
 export function routerTransition() {
   return trigger('routerAnimation', [
@@ -15,7 +15,7 @@ export function routerTransition() {
       // Initial state of new route
       query(':enter',
         style({
-          position: 'fixed',
+          position: 'relative',
           width: '100%',
           transform: 'translateX(-100%)'
         }), { optional: true }),
@@ -44,7 +44,7 @@ export function routerTransition() {
         style({
           position: 'fixed',
           width: '100%',
-          transform: 'translateX(-100%)'
+          transform: 'translateX(-1000%)'
         }), { optional: true }),
       // move page off screen right on leave
       query(':leave',
@@ -52,7 +52,7 @@ export function routerTransition() {
           style({
             position: 'fixed',
             width: '100%',
-            transform: 'translateX(100%)',
+            transform: 'translateX(1000%)',
           })
         ), { optional: true }),
       // move page in screen from left to right
@@ -71,7 +71,7 @@ export function routerTransition() {
         style({
           position: 'fixed',
           width: '100%',
-          transform: 'translateX(100%)'
+          transform: 'translateX(1000%)'
         }), { optional: true }),
       // move page off screen right on leave
       query(':leave',
@@ -79,7 +79,7 @@ export function routerTransition() {
           style({
             position: 'fixed',
             width: '100%',
-            transform: 'translateX(-100%)',
+            transform: 'translateX(-1000%)',
           })
         ), { optional: true }),
       // move page in screen from left to right

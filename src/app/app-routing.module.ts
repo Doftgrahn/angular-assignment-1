@@ -10,11 +10,10 @@ import { ListComponent } from './list/list.component';
 
 
 const appRoutes: Routes = [
-  // { path: '**', redirectTo: '' },
   { path: '', redirectTo: '', pathMatch: 'full' },
-  { path: 'trafficlight', component: TrafficlightComponent, data: { num: 1 } },
-  { path: 'bookTravel', component: BooktravelComponent, data: { num: 2 } },
-  { path: 'listCharacters', component: ListComponent, data: { num: 5 } },
+  { path: 'trafficlight', component: TrafficlightComponent, data: { num: 2 } },
+  { path: 'bookTravel', component: BooktravelComponent, data: { num: 1 } },
+  { path: 'listCharacters', component: ListComponent, data: { num: 2 } },
 ];
 
 
