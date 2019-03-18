@@ -4,73 +4,70 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   border-radius: 20px;
   border: 20px solid $color-yellow;
-  // border-left: 20px  solid $color-yellow;
-  // border-right: 20px  solid $color-yellow;
-  // border-bottom: 20px  solid $color-yellow;
   max-width: $width;
-  height: 380px;
-  padding: 0;
-  margin:0;
+  height: 400px;
   background-color: $background-color-black;
   @media screen and (min-width: 800px) {
     padding: 20px 60px;
   }
 
   h2 {
-    // margin: 0;
+    margin: 0;
     text-align: center;
     color: white;
     text-decoration: underline;
+  }
+
+  .list-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     align-content: center;
+       justify-content: center;
+    flex-wrap: wrap;
+     margin: 0;
+     padding: 0;
+
+    app-travel {
+      height:auto;
+      width: auto;
+      // padding: 20px;
+       margin: auto;
+       padding: 0;
+    }
   }
 
   .result__wrapper {
     .container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       // margin: 20px;
+      p {
+        color: white;
+        margin: 0.2em;
+      }
     }
   }
-}
 
-.list-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  @media screen and(min-width:800px) {
-    padding: 20px 60px;
+  button {
+    width: 20%;
+    margin: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background-color: $color-yellow;
+
+    &:hover {
+      background-color: $color-blue;
+    }
   }
-
-  app-travel {
-    margin-left: 20px;
-  }
-}
-
-button {
-  width: 20%;
-  margin: 20px;
-  outline: none;
-  cursor: pointer;
-  transition: 0.2s ease;
-  background-color: $color-yellow;
-
-  &:hover {
-    background-color: $color-blue;
-  }
-}
-
-p {
-  color: white;
-  margin: 0;
 }
 
 .blue {

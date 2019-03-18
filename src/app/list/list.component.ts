@@ -3,6 +3,7 @@ import { Wowclasses } from '../wowclasses';
 import { ListService } from '../list.service';
 
 
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -16,7 +17,7 @@ export class ListComponent implements OnInit {
   newCharacter: Wowclasses = new Wowclasses();
 
   constructor(private wowClasses: ListService) { }
-  
+
   /*Set index on class so i can pinpoint them and add class.*/
 
   setIndex(index: number) {

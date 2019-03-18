@@ -40,6 +40,16 @@ export class TravelService {
     typeOfTravel: 'Airplane',
     worthSeeing: 'Elephant Island'
   },
+  {
+    city: 'New Delhi',
+    typeOfTravel: 'Awesome Train',
+    worthSeeing: 'Food!'
+  },
+  {
+    city:'New York',
+    typeOfTravel: 'Airplane',
+    worthSeeing: 'Empire State Building'
+  }
   ];
 
   getAllCities(): City[] {
