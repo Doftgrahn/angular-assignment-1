@@ -14,12 +14,10 @@ import { ListService } from '../list.service';
 export class ListComponent implements OnInit {
   title: string = 'world of warcraft classes';
   selectedIndex: number;
-  classes:Wowclasses[];
-
+  classes: Wowclasses[];
   newCharacter: Wowclasses = new Wowclasses();
 
-  constructor(private wowClasses: ListService) {
-   }
+  constructor(private wowClasses: ListService) {}
 
   /*Set index on class so i can pinpoint them and add class.*/
 
@@ -35,7 +33,6 @@ export class ListComponent implements OnInit {
   }
 
   removeCharacter(character: any) {
-    console.log(character)
     this.wowClasses.removeItem(character.id);
   }
 

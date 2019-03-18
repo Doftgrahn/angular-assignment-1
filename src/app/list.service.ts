@@ -8,8 +8,6 @@ export class ListService {
   listClasses: Wowclasses[] = ['Warrior', 'Paladin', 'Hunter', 'Rouge', 'Priest', 'Death Knight', 'Shaman', 'Monk', 'Druid', 'Demon Hunter'].map((classes, id) => ({ id: id, character: classes }));
   lastId: number = this.listClasses.length + 1;
 
-  constructor() { }
-
   addCharacter(character: Wowclasses): ListService {
     if (!character.character || !character.id) {
       character.id = ++this.lastId;
@@ -36,7 +34,6 @@ export class ListService {
     return classes;
   }
 
-
   /*Send characters */
 
   getAllCharacters(): Wowclasses[] {
@@ -46,4 +43,7 @@ export class ListService {
   getCharacterById(id: number): Wowclasses {
     return this.listClasses.filter(char => char.id === id).pop();
   }
+
+  constructor() { }
+
 }
