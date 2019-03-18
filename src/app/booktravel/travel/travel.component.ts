@@ -27,8 +27,4 @@ export class TravelComponent implements OnInit {
     });
   }
 
-
-
-
-
 }
