@@ -8,6 +8,7 @@
       (click)="onClick(i)"
       [city]="city.city"
       [typeOfTravel] = "city.typeOfTravel"
+      [worthSeeing] = "city.worthSeeing"
       (onSelected)="SelectedCity($event)"></app-travel>
 
   </div>
@@ -24,6 +25,7 @@
       class="container">
     <p>  You have selected {{selectCity.city}}</p>
     <p>The Best way to travel here is by {{selectCity.typeOfTravel}}</p>
+    <p>You can also experience {{selectCity.worthSeeing}} here</p>
     </div>
   </div>
 

@@ -15,7 +15,7 @@ export class BooktravelComponent implements OnInit {
 
   constructor(private travelService: TravelService) { }
 
-  get cities():City[] {
+  get cities(): City[] {
     return this.travelService.getAllCities()
   }
 
@@ -23,8 +23,8 @@ export class BooktravelComponent implements OnInit {
     this.selectCity = city;
     this.onSelected.emit(city);
   }
-  
-  unSelect():any {
+
+  unSelect(): any {
     this.selectCity = null;
   }
 

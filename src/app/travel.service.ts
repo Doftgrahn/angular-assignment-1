@@ -9,21 +9,36 @@ export class TravelService {
 
   cities: City[] = [{
     city: 'Göteborg',
-    typeOfTravel: 'Bike'
+    typeOfTravel: 'Bike',
+    worthSeeing: 'Vasa Parken',
   }, {
     city: 'Paris',
-    typeOfTravel: 'Train'
+    typeOfTravel: 'Train',
+    worthSeeing: 'snobby french people',
   }, {
     city: 'Buenos Aires',
-    typeOfTravel: 'Airplane'
+    typeOfTravel: 'Airplane',
+    worthSeeing: 'Eat good meat'
   },
   {
     city: 'Hålanda',
-    typeOfTravel: 'Häst and Vagn'
+    typeOfTravel: 'Häst and Vagn',
+    worthSeeing: 'The countryside',
   },
   {
     city: 'Copenhagen',
-    typeOfTravel: 'Train'
+    typeOfTravel: 'Train',
+    worthSeeing: 'Drink beer all day long',
+  },
+  {
+    city: 'London',
+    typeOfTravel: 'Airplane',
+    worthSeeing: 'Big ben'
+  },
+  {
+    city: 'Mumbai',
+    typeOfTravel: 'Airplane',
+    worthSeeing: 'Elephant Island'
   },
   ];
 

@@ -13,6 +13,7 @@ export class TravelComponent implements OnInit {
 
   @Input() city: string;
   @Input() typeOfTravel: string;
+  @Input() worthSeeing:string;
   @Output() onSelected = new EventEmitter<City>();
 
   constructor() {
@@ -24,6 +25,7 @@ export class TravelComponent implements OnInit {
     this.onSelected.emit({
       city: this.city,
       typeOfTravel: this.typeOfTravel,
+      worthSeeing:this.worthSeeing,
     });
   }
 
