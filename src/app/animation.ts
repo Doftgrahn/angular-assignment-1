@@ -15,7 +15,7 @@ export function routerTransition() {
       // Initial state of new route
       query(':enter',
         style({
-          position: 'relative',
+          position: 'fixed',
           width: '100%',
           transform: 'translateX(-100%)'
         }), { optional: true }),

@@ -21,8 +21,9 @@
   [(ngModel)]="newCharacter.character"
   (keyup.enter)="addCharacter()" />
 
+<span *ngIf="allCharacters === null">You have zero characters in your list.</span>
 
-  <span>
+  <span *ngIf="allCharacters !== null">
     You have {{allCharacters.length}} characters in your list.
   </span>
 </div>

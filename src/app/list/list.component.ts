@@ -10,13 +10,16 @@ import { ListService } from '../list.service';
   styleUrls: ['./list.component.scss'],
   providers: [ListService],
 })
+
 export class ListComponent implements OnInit {
   title: string = 'world of warcraft classes';
   selectedIndex: number;
+  classes:Wowclasses[];
 
   newCharacter: Wowclasses = new Wowclasses();
 
-  constructor(private wowClasses: ListService) { }
+  constructor(private wowClasses: ListService) {
+   }
 
   /*Set index on class so i can pinpoint them and add class.*/
 
@@ -27,7 +30,7 @@ export class ListComponent implements OnInit {
   /*add,remove(not done yet) and a function to get all the characters*/
 
   addCharacter() {
-    this.wowClasses.addCharacter(this.newCharacter, this.newCharacter);
+    this.wowClasses.addCharacter(this.newCharacter);
     this.newCharacter = new Wowclasses;
   }
 

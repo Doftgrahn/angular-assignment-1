@@ -10,7 +10,7 @@ export class ListService {
 
   constructor() { }
 
-  addCharacter(character: Wowclasses, id: Wowclasses): ListService {
+  addCharacter(character: Wowclasses): ListService {
     if (!character.character || !character.id) {
       character.id = ++this.lastId;
     }
@@ -35,6 +35,7 @@ export class ListService {
     Object.assign(classes, values);
     return classes;
   }
+
 
   /*Send characters */
 
