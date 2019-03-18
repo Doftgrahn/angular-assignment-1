@@ -9,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class TrafficlightComponent implements OnInit {
   carPic = '../../assets/cardone.png';
   title: string = 'Traffic Light';
+
   state: number = 0;
+
   activeClass: boolean = false;
 
   onClick() {
@@ -27,7 +29,6 @@ export class TrafficlightComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
+  
 }
