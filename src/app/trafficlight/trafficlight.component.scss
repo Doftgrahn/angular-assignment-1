@@ -4,7 +4,7 @@ section {
   background-color: $background-color-black;
   padding: 20px 40px;
   max-width: $width;
-  border: 20px  solid $color-yellow;
+  border: 20px solid $color-yellow;
   // border-left: 20px  solid $color-yellow;
   // border-right: 20px  solid $color-yellow;
   // border-bottom: 20px  solid $color-yellow;
@@ -81,15 +81,12 @@ img {
   }
 
   25% {
-     transform: translateY(500px);
+    transform: translateY(500px);
   }
-
 
   60% {
     transform: translate3d(50deg);
   }
-
-
 
   100% {
     transform: rotateZ(0deg);

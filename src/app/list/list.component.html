@@ -13,13 +13,19 @@
   </li>
   </ul>
 
+  <div class="output-container">
+
+
   <input placeholder="Add a Class!"
   autofocus=""
   [(ngModel)]="newCharacter.character"
   (keyup.enter)="addCharacter()" />
 
+
   <span>
     You have {{allCharacters.length}} characters in your list.
   </span>
-  
+</div>
+
+
 </section>
