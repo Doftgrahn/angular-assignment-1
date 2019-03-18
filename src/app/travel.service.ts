@@ -46,7 +46,7 @@ export class TravelService {
     worthSeeing: 'Food!'
   },
   {
-    city:'New York',
+    city: 'New York',
     typeOfTravel: 'Airplane',
     worthSeeing: 'Empire State Building'
   }

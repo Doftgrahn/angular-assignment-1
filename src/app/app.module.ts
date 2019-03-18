@@ -2,6 +2,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 /*components and routing*/
 import { AppComponent } from './app.component';
 import { TrafficlightComponent } from './trafficlight/trafficlight.component';
@@ -13,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 /*Services*/
 import { ListService } from './list.service';
 import { TravelService } from './travel.service';
+import { NavigationService } from './navigator.service';
 
 @NgModule({
   declarations: [
@@ -26,8 +29,9 @@ import { TravelService } from './travel.service';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
-  providers: [ListService, TravelService],
+  providers: [ListService, TravelService, NavigationService],
   bootstrap: [AppComponent]
 })
 

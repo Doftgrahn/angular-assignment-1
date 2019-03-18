@@ -6,17 +6,22 @@ import { TrafficlightComponent } from './trafficlight/trafficlight.component';
 import { BooktravelComponent } from './booktravel/booktravel.component';
 import { ListComponent } from './list/list.component';
 
+
+
+
 const appRoutes: Routes = [
+  // { path: '**', redirectTo: '' },
   { path: '', redirectTo: '', pathMatch: 'full' },
-  { path: 'trafficlight', component: TrafficlightComponent },
-  { path: 'bookTravel', component: BooktravelComponent },
-  { path: 'listCharacters', component: ListComponent },];
+  { path: 'trafficlight', component: TrafficlightComponent, data: { num: 1 } },
+  { path: 'bookTravel', component: BooktravelComponent, data: { num: 2 } },
+  { path: 'listCharacters', component: ListComponent, data: { num: 5 } },
+];
+
 
 @NgModule({
   declarations: [],
   imports: [
-    // CommonModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   exports: [RouterModule]
 })
