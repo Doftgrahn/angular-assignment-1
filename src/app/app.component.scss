@@ -13,6 +13,7 @@
   width: 100%;
   padding: 20px;
 
+
   h1 {
     background-color: $background-color-black;
     padding: 1em;
@@ -25,31 +26,34 @@
   }
 
   .router__container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $background-color-black;
     border: 20px solid $color-yellow;
-    border-radius: 20px;
+    border-top: 20px solid $color-yellow;
+    border-radius: 20px 20px 0 0;
     margin-bottom: 20px;
     z-index: 10;
 
     a {
+      background-image: $color-yellow;
       padding: 20px;
       color: white;
       text-decoration: none;
       cursor: pointer;
-      transition: 0.001s ease;
+      transition: all 0.4s ease-in-out;
 
       &:hover {
         color: black;
+        background-position: 100% 0;
       }
     }
   }
 }
 
 .active {
-  // border: 2px solid $color-blue;
   overflow: hidden;
   position: relative;
 
@@ -60,10 +64,10 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: $color-blue;
+    background-color: $color-yellow;
     position: absolute;
     display: block;
-    animation: slide 0.5s alternate;
+    animation: slide 0.4s alternate;
     z-index: -10;
   }
 }
@@ -73,11 +77,17 @@
     width: 0;
     height: 0;
     top: 50px;
+    border: 2px solid $color-blue;
+  }
+
+  50% {
+    background-color: $color-yellow;
   }
 
   100% {
     transform: rotate(360deg);
     height: 100%;
     width: 100%;
+    background-color: $color-blue;
   }
 }

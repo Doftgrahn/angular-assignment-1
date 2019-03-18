@@ -30,8 +30,6 @@ export class BooktravelComponent implements OnInit {
 
   constructor() { }
 
-
-
   selectCity: City = null;
   @Output() onSelected = new EventEmitter<City>();
 
@@ -42,11 +40,12 @@ export class BooktravelComponent implements OnInit {
     this.selectCity = city;
     this.onSelected.emit(city);
   }
+
   unSelect() {
     this.selectCity = null;
   }
 
-  setIndex(index: number) {
+  onClick(index: number) {
     this.selectedIndex = index;
   }
 

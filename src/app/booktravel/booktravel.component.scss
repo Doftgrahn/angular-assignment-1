@@ -3,45 +3,67 @@
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   border-radius: 20px;
   border: 20px solid $color-yellow;
-  min-height: 300px;
+  // border-left: 20px  solid $color-yellow;
+  // border-right: 20px  solid $color-yellow;
+  // border-bottom: 20px  solid $color-yellow;
   width: $width;
-  height: $width;
+  height: 380px;
   background-color: $background-color-black;
 
   h2 {
+    // margin: 0;
     text-align: center;
     color: white;
     text-decoration: underline;
   }
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1em;
+  .result__wrapper {
+    width: 80%;
 
-    p {
-      color: white;
-      margin-top: 20px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 20px;
     }
   }
-}
-
-button {
-  width: 20%;
 }
 
 .list-wrapper {
   display: flex;
   flex-direction: row;
+  align-items: center;
+
+  app-travel {
+    margin-left: 20px;
+  }
 }
 
- .blue {
+button {
+  width: 20%;
+  margin: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: $color-blue;
+  }
+}
+
+p {
+  color: white;
+  margin: 20px;
+}
+
+.blue {
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
   background-color: $color-blue;
 }

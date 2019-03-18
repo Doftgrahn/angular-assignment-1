@@ -3,10 +3,14 @@
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
+  // align-items: center;
   border-radius: 20px;
   padding: 20px;
   border: 20px solid $color-yellow;
+  // border-left: 20px  solid $color-yellow;
+  // border-right: 20px  solid $color-yellow;
+  // border-bottom: 20px  solid $color-yellow;
   width: $width;
   min-height: 520px;
   background-color: $background-color-black;
@@ -18,14 +22,18 @@ section {
     text-decoration: underline;
   }
 
-  li {
-    list-style-type: none;
-    text-align: left;
-    flex: 1;
-    color: white;
-    margin: 0;
-    cursor: pointer;
-    padding: 0.4em;
+  ul {
+    height: 80%;
+
+    li {
+      list-style-type: none;
+      text-align: left;
+      flex: 1;
+      color: white;
+      margin: 0;
+      cursor: pointer;
+      padding: 0.4em;
+    }
   }
 
   input {

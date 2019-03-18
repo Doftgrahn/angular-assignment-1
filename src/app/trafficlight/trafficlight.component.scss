@@ -4,7 +4,10 @@ section {
   background-color: $background-color-black;
   padding: 20px 40px;
   max-width: $width;
-  border: 30px solid $color-yellow;
+  border: 20px  solid $color-yellow;
+  // border-left: 20px  solid $color-yellow;
+  // border-right: 20px  solid $color-yellow;
+  // border-bottom: 20px  solid $color-yellow;
   border-radius: 20px;
   @media screen and (min-width: 800px) {
     // padding: 20px 0;
@@ -78,21 +81,15 @@ img {
   }
 
   25% {
-    transform: translateY(100px);
+     transform: translateY(500px);
   }
 
-  50% {
-    transform: translateY(0px);
-  }
 
   60% {
-    transform: translateY(25px);
     transform: translate3d(50deg);
   }
 
-  80% {
-    transform: rotateZ(45deg);
-  }
+
 
   100% {
     transform: rotateZ(0deg);

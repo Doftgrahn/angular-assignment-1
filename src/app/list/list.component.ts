@@ -38,9 +38,6 @@ export class ListComponent implements OnInit {
     return this.wowClasses.getAllCharacters();
   }
 
-
-
   ngOnInit() { }
-
 
 }
